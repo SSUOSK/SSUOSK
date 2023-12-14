@@ -1,0 +1,204 @@
+/* 백그라운드 이미지 설정 */
+body {
+    background-image: url('soongsil.png');
+    background-size: 1920px 1080px; /* 이미지를 창에 맞게 조절 */
+    background-repeat: no-repeat; /* 이미지 반복 없음 */
+}
+
+/* 내용을 담을 컨테이너 스타일링 (선택사항) */
+.content-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* 내용이 보이도록 배경 색상 설정 */
+}
+
+.button-container {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* 왼쪽 상단으로 이동시킵니다. */
+    flex-direction: column; /* 수직 방향으로 나열하도록 설정 */
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 10px;
+    width: 300px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.image_button {
+    padding: 0; /* 이미지 버튼의 패딩을 0으로 설정 */
+    background: none; /* 배경을 없애서 버튼 모양을 없애기 */
+    border: none; /* 테두리 없애기 */
+    cursor: pointer;
+}
+
+.image_button img {
+    width: 40px; /* 부모 요소인 버튼에 맞게 이미지 크기 조절 */
+    height: auto; /* 가로 비율에 맞춰 세로 크기 자동 조절 */
+}
+#buildingImage {
+    max-width: 100%;
+    height: auto;
+}
+.colleges_button {
+    padding: 10px;
+    width: 300px;
+    background-color: #fff;
+    color: #3498db;
+    border: none;
+    cursor: pointer;
+}
+
+.history_hidden {
+    display: none;
+}
+.colleges_hidden {
+    display: none;
+}
+.amenities_hidden {
+    display: none;
+}
+
+/* building.png -> set location */
+.baird { /*베어드홀*/
+    position: absolute;
+    top: 450px; /* 수직 가운데 정렬 */
+    left: 660px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.education { /*교육관*/
+    position: absolute;
+    top: 130px; /* 수직 가운데 정렬 */
+    left: 810px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.culture { /*문화관*/
+    position: absolute;
+    top: 480px; /* 수직 가운데 정렬 */
+    left: 330px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.whitehorse { /*백마관*/
+    position: absolute;
+    top: 130px; /* 수직 가운데 정렬 */
+    left: 680px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.sungdeok { /*숭덕경상관*/
+    position: absolute;
+    top: 345px; /* 수직 가운데 정렬 */
+    left: 445px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.venture { /*벤처중소기업센터*/
+    position: absolute;
+    top: 190px; /* 수직 가운데 정렬 */
+    left: 930px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.truth { /*진리관*/
+    position: absolute;
+    top: 350px; /* 수직 가운데 정렬 */
+    left: 935px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.studentcenter { /*학생회관*/
+    position: absolute;
+    top: 290px; /* 수직 가운데 정렬 */
+    left: 830px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.ahn { /*안익태기념관*/
+    position: absolute;
+    top: 615px; /* 수직 가운데 정렬 */
+    left: 460px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.engineer { /*형남공학관*/
+    position: absolute;
+    top: 625px; /* 수직 가운데 정렬 */
+    left: 700px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.jo { /*조만식기념관*/
+    position: absolute;
+    top: 275px; /* 수직 가운데 정렬 */
+    left: 1100px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.west { /*웨스트민스터홀*/
+    position: absolute;
+    top: 360px; /* 수직 가운데 정렬 */
+    left: 1120px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.library { /*중앙도서관*/
+    position: absolute;
+    top: 520px; /* 수직 가운데 정렬 */
+    left: 1155px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.future { /*미래관*/
+    position: absolute;
+    top: 650px; /* 수직 가운데 정렬 */
+    left: 1135px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.han { /*한경직기념관*/
+    position: absolute;
+    top: 650px; /* 수직 가운데 정렬 */
+    left: 965px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.christ { /*기독교박물관*/
+    position: absolute;
+    top: 650px; /* 수직 가운데 정렬 */
+    left: 845px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.infoscience { /*정보과학관*/
+    position: absolute;
+    top: 890px; /* 수직 가운데 정렬 */
+    left: 1370px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.computerscience { /*전산관*/
+    position: absolute;
+    top: 680px; /* 수직 가운데 정렬 */
+    left: 1290px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.coopsket1 { /*형남공학관*/
+    position: absolute;
+    top: 625px; /* 수직 가운데 정렬 */
+    left: 700px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.coopsket2 { /*숭덕경상관*/
+    position: absolute;
+    top: 345px; /* 수직 가운데 정렬 */
+    left: 445px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.coopsket3 { /*전산관*/
+    position: absolute;
+    top: 680px; /* 수직 가운데 정렬 */
+    left: 1290px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.coopsket4 { /*학생회관*/
+    position: absolute;
+    top: 290px; /* 수직 가운데 정렬 */
+    left: 830px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}
+.coopsket5 { /*조만식기념관*/
+    position: absolute;
+    top: 275px; /* 수직 가운데 정렬 */
+    left: 1100px; /* 수평 가운데 정렬 */
+    gap: 10px;
+}

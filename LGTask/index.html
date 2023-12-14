@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Campus Tour</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .colleges-buttons {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .colleges-buttons button {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="square">
+        <div class="button-container">
+            <button class="button" onclick="showHistoryButtons()">History of the building</button>
+            <button class="button" onclick="showCollegesButtons()">Colleges</button>
+            <div class="colleges-buttons">
+                <button class="button colleges_button colleges_hidden" onclick="showIconsForCollege('인문대학')">인문대학</button>
+                <button class="button colleges_button colleges_hidden" onclick="showIconsForCollege('자연과학대학')">자연과학대학</button>
+                <button class="button colleges_button colleges_hidden" onclick="showIconsForCollege('법과대학')">법과대학</button>
+                <button class="button colleges_button colleges_hidden" onclick="showIconsForCollege('사회과학대학')">사회과학대학</button>
+                <button class="button colleges_button colleges_hidden" onclick="showIconsForCollege('경제통상대학')">경제통상대학</button>
+                <button class="button colleges_button colleges_hidden" onclick="showIconsForCollege('경영대학')">경영대학</button>
+                <button class="button colleges_button colleges_hidden" onclick="showIconsForCollege('공과대학')">공과대학</button>
+                <button class="button colleges_button colleges_hidden" onclick="showIconsForCollege('IT대학')">IT대학</button>
+            </div>
+            <button class="button" onclick="hideImageButtons()">Amenities</button>
+        </div>
+        <div class="image-buttons">
+            <div class="image-button-container">
+                <button class="image_button history_image_button history_hidden baird" data-college="자연과학대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Baird')">
+                    <img src="ic_1.png" alt="Building 1"> 
+                </button>
+                <button class="image_button history_image_button history_hidden education" data-college="경영대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Education')">
+                    <img src="ic_2.png" alt="Building 2">
+                </button>
+                <button class="image_button history_image_button history_hidden culture" data-college="공과대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Munhwa')">
+                    <img src="ic_3.png" alt="Building 3"> 
+                </button>
+                <button class="image_button history_image_button history_hidden whitehorse" data-college="경제통상대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Whitehorse')">
+                    <img src="ic_4.png" alt="Building 4">
+                </button>
+                <button class="image_button history_image_button history_hidden sungdeok" data-college="경영대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Sungdeok')">
+                    <img src="ic_5.png" alt="Building 5"> 
+                </button>
+                <button class="image_button history_image_button history_hidden venture" data-college="경영대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Venture')">
+                    <img src="ic_6.png" alt="Building 6">
+                </button>
+                <button class="image_button history_image_button history_hidden truth" data-college="법과대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Jinli')">
+                    <img src="ic_7.png" alt="Building 7"> 
+                </button>
+                <button class="image_button history_image_button history_hidden studentcenter" data-college="사회과학대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('StudentCenter')">
+                    <img src="ic_8.png" alt="Building 8">
+                </button>
+                <button class="image_button history_image_button history_hidden ahn" data-college="경제통상대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Aniktea')">
+                    <img src="ic_9.png" alt="Building 9"> 
+                </button>
+                <button class="image_button history_image_button history_hidden engineer" data-college="공과대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Hyungnam')">
+                    <img src="ic_10.png" alt="Building 10">
+                </button>
+                <button class="image_button history_image_button history_hidden jo" data-college="인문대학"  data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Jomansik')">
+                    <img src="ic_11.png" alt="Building 11"> 
+                </button>
+                <button class="image_button history_image_button history_hidden west" data-college="" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Westminster')">
+                    <img src="ic_12.png" alt="Building 12">
+                </button>
+                <button class="image_button history_image_button history_hidden library" data-college="" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Library')">
+                    <img src="ic_13.png" alt="Building 13"> 
+                </button>
+                <button class="image_button history_image_button history_hidden future" data-college="자연과학대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Future')">
+                    <img src="ic_14.png" alt="Building 14">
+                </button>
+                <button class="image_button history_image_button history_hidden han" data-college="인문대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('HanKyeongJik')">
+                    <img src="ic_15.png" alt="Building 15"> 
+                </button>
+                <button class="image_button history_image_button history_hidden christ" data-college="인문대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('ChristianMuseum')">
+                    <img src="ic_16.png" alt="Building 16">
+                </button>
+                <button class="image_button history_image_button history_hidden infoscience" data-college="IT대학" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('InformationScience')">
+                    <img src="ic_17.png" alt="Building 17"> 
+                </button>
+                <button class="image_button history_image_button history_hidden computerscience" data-college="" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('ComputerScience')">
+                    <img src="ic_18.png" alt="Building 18">
+                </button>
+            </div>
+        </div>
+        <div>
+            <!-- Amenities 이미지 버튼들 추가 -->
+            <div class="amenities-buttons">
+                <button class="image_button amenities_image_button amenities_hidden coopsket1" data-bs-toggle="modal" data-bs-target="#amenitiesModal" onclick="updateModalContent2('Hyungnam')">
+                    <img src="ic_1_red.png" alt="Amenity 1">
+                </button>
+                <button class="image_button amenities_image_button amenities_hidden coopsket2" data-bs-toggle="modal" data-bs-target="#amenitiesModal" onclick="updateModalContent2('Sungdeok')">
+                    <img src="ic_2_red.png" alt="Amenity 2">
+                </button>
+                <button class="image_button amenities_image_button amenities_hidden coopsket3" data-bs-toggle="modal" data-bs-target="#amenitiesModal" onclick="updateModalContent2('global')">
+                    <img src="ic_3_red.png" alt="Amenity 3">
+                </button>
+                <button class="image_button amenities_image_button amenities_hidden coopsket4" data-bs-toggle="modal" data-bs-target="#amenitiesModal" onclick="updateModalContent2('StudentCenter')">
+                    <img src="ic_4_red.png" alt="Amenity 4">
+                </button>
+                <button class="image_button amenities_image_button amenities_hidden coopsket5" data-bs-toggle="modal" data-bs-target="#amenitiesModal" onclick="updateModalContent2('Jomansik')">
+                    <img src="ic_5_red.png" alt="Amenity 5">
+                </button>
+                <!-- 다른 Amenities 이미지 버튼들 추가 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="buildingTitle">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="buildingImage" src="" alt="Building Image">
+                    <p id="facility"></p>
+                    <p id="story"></p>
+                    <p id="introduction"></p>
+                    <p id="information"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- Modal -->
+    <div class="modal fade" id="amenitiesModal" tabindex="-1" aria-labelledby="amenitiesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="amenitiesModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="amenitiesInformation"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function showIconsForCollege(college) {
+            // 모든 이미지 숨기기
+            var images = document.querySelectorAll('.image_button');
+            images.forEach(function(image) {
+                image.classList.add('history_hidden');
+            });
+
+            // 선택한 학부의 이미지만 보이기
+            var selectedImages = document.querySelectorAll('[data-college="' + college + '"]');
+            selectedImages.forEach(function(image) {
+                image.classList.remove('history_hidden');
+            });
+        }
+    </script>
+</body>
+</html>

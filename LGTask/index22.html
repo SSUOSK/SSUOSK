@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Campus Tour</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="square">
+        <div class="button-container">
+            <button class="button" onclick="showHistoryButtons()">History of the building</button>
+            <button class="button" onclick="showCollegesButtons()">Colleges</button>
+            <button class="button colleges_button colleges_hidden">인문대학</button>
+            <button class="button colleges_button colleges_hidden">자연과학대학</button>
+            <button class="button colleges_button colleges_hidden">법과대학</button>
+            <button class="button colleges_button colleges_hidden">사회과학대학</button>
+            <button class="button colleges_button colleges_hidden">경제통상대학</button>
+            <button class="button colleges_button colleges_hidden">경영대학</button>
+            <button class="button colleges_button colleges_hidden">공과대학</button>
+            <button class="button colleges_button colleges_hidden">IT대학</button>
+            <button class="button" onclick="hideImageButtons()">Amenities</button>
+        </div>
+        <div>
+            <button class="image_button history_image_button history_hidden baird" 
+                data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Baird')">
+                <img src="ic_1.png"> 
+            </button>
+            <button class="image_button history_image_button history_hidden education"
+                data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Education')">
+                <img src="ic_2.png">
+            </button>
+            <button class="image_button history_image_button history_hidden culture"
+                data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Munhwa')">
+                <img src="ic_3.png">
+            </button>
+            <button class="image_button history_image_button history_hidden whitehorse"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Whitehorse')">
+                <img src="ic_4.png">
+            </button>
+            <button class="image_button history_image_button history_hidden sungdeok" 
+                data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Sungdeok')">
+                <img src="ic_5.png">
+            </button>
+            <button class="image_button history_image_button history_hidden venture"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Venture')">
+                <img src="ic_6.png">
+            </button>
+            <button class="image_button history_image_button history_hidden truth"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Jinli')">
+                <img src="ic_7.png">
+            </button>
+            <button class="image_button history_image_button history_hidden studentcenter"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('StudentCenter')">
+                <img src="ic_8.png">
+            </button>
+            <button class="image_button history_image_button history_hidden ahn"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Aniktea')">
+                <img src="ic_9.png">
+            </button>
+            <button class="image_button history_image_button history_hidden engineer"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Hyungnam')">
+                <img src="ic_10.png">
+            </button>
+            <button class="image_button history_image_button history_hidden jo"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Jomansik')">
+                <img src="ic_11.png">
+            </button>
+            <button class="image_button history_image_button history_hidden west"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Westminster')">
+                <img src="ic_12.png">
+            </button>
+            <button class="image_button history_image_button history_hidden library"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Library')">
+                <img src="ic_13.png">
+            </button>
+            <button class="image_button history_image_button history_hidden future"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('Future')">
+                <img src="ic_14.png">
+            </button>
+            <button class="image_button history_image_button history_hidden han"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('HanKyeongJik')">
+                <img src="ic_15.png">
+            </button>
+            <button class="image_button history_image_button history_hidden christ"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('ChristianMuseum')">
+                <img src="ic_16.png">
+            </button>
+            <button class="image_button history_image_button history_hidden infoscience"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('InformationScience')">
+                <img src="ic_17.png">
+            </button>
+            <button class="image_button history_image_button history_hidden computerscience"
+                data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalContent('ComputerScience')">
+                <img src="ic_18.png">
+            </button>
+        </div>
+        <div>
+            <button class="image_button amenities_image_button amenities_hidden coopsket1">
+                <img src="ic_1_red.png">
+            </button>
+            <button class="image_button amenities_image_button amenities_hidden coopsket2">
+                <img src="ic_2_red.png">
+            </button>
+            <button class="image_button amenities_image_button amenities_hidden coopsket3">
+                <img src="ic_3_red.png">
+            </button>
+            <button class="image_button amenities_image_button amenities_hidden coopsket4">
+                <img src="ic_4_red.png">
+            </button>
+            <button class="image_button amenities_image_button amenities_hidden coopsket5">
+                <img src="ic_5_red.png">
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="buildingTitle">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 동적으로 업데이트될 내용 -->
+                    <p id="facility"></p>
+                    <p id="story"></p>
+                    <p id="introduction"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
